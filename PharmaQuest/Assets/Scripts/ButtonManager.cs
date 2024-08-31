@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -20,5 +21,10 @@ public class ButtonManager : MonoBehaviour
     {
         Singleton.selectedImage = button.GetComponent<Medicament>().medicamentImage;
         Singleton.selectedSymptomKey = button.GetComponent<Medicament>().sypmtomKey;
+    }
+
+    public void ChosenMedImage(GameObject medTrai)
+    {
+        medTrai.GetComponent<Image>().sprite = Singleton.selectedImage;
     }
 }
