@@ -1,5 +1,7 @@
 # PharmaQuest
 
+![Oficina3](https://github.com/user-attachments/assets/6d387aa3-69a7-46c4-81bf-8ef8aca5a700)
+
 Enlace que redirige al drive donde se encuentra la parte gráfica y las tomas de pantalla
 de las integraciones con Avalanche.
 
