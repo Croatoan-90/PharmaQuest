@@ -21,6 +21,12 @@ public class SymptomsManager : MonoBehaviour
 
     public float timeLimit;
 
+    public Image patientGeneralImage;
+
+    public Sprite [] imagePatient;
+
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +35,7 @@ public class SymptomsManager : MonoBehaviour
         Singleton.time = timeLimit;
         Timer.Instance.timeController = true;
         medChosen.sprite = null;
+        patientGeneralImage.sprite = imagePatient[1];
     }
 
     private void Update()
@@ -44,7 +51,8 @@ public class SymptomsManager : MonoBehaviour
         {
             Timer.Instance.TimeController();
             nextButton.gameObject.SetActive(true);
-            
+            patientGeneralImage.sprite = imagePatient[2];
+
         }
     }
 
@@ -64,6 +72,7 @@ public class SymptomsManager : MonoBehaviour
                 indexNegative++;
                 if (indexNegative == totalSymptoms)
                 {
+                    patientGeneralImage.sprite = imagePatient[0];
                     Singleton.time -= 2;
                 }
                 medChosen.sprite = null;

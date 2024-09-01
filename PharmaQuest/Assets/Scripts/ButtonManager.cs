@@ -58,6 +58,6 @@ public class ButtonManager : MonoBehaviour
     {
         Singleton.pills -= 30;
         BoostManager.instance.newLife = true;
-        button.enabled = false;
+        button.gameObject.SetActive(false);
     }
 }
