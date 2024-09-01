@@ -28,20 +28,20 @@ public class BoostManager : MonoBehaviour
     {
         if(Singleton.pills < 10)
         {
-            extraTimeButton.enabled = false;
+            extraTimeButton.gameObject.SetActive(false);
         }
         else
         {
-            extraTimeButton.enabled = true;
+            extraTimeButton.gameObject.SetActive(true);
         }
 
         if (Singleton.pills < 30) 
         { 
-            extraLifeButton.enabled = false;
+            extraLifeButton.gameObject.SetActive(false);
         }
         else
         {
-            extraLifeButton.enabled = true;
+            extraLifeButton.gameObject.SetActive(true);
         }
 
         if (newLife) 
@@ -60,6 +60,6 @@ public class BoostManager : MonoBehaviour
     {
         newLife = false;
         clue = false;
-        extraLifeButton.enabled = true;
+        extraLifeButton.gameObject.SetActive(true);
     }
 }
