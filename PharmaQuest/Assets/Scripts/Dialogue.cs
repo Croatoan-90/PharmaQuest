@@ -1,59 +1,72 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Dialogue : MonoBehaviour
 {
     [SerializeField, TextArea(5, 7)] private string[] dialogueLines;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private GameObject buttonNext; 
+    [SerializeField] private GameObject buttonChangeScene;
 
-    private float typingTime = 0.005f;
-
-    private bool didDialogueStart;
+    private float typingTime = 0.008f;
     private int lineIndex;
 
+    void Start()
+    {
+       
+        buttonChangeScene.SetActive(false); 
+        buttonNext.SetActive(false); 
+        dialoguePanel.SetActive(true); 
 
-    void Update()
-    {
-        if (!didDialogueStart)
-        {
-            StartDialogue();
-        }
-    }
-    private void StartDialogue()
-    {
-        didDialogueStart = true;
-        dialoguePanel.SetActive(true);
-        lineIndex = 0;
+        
         StartCoroutine(ShowLine());
     }
 
     public void NextDialogueLine()
     {
         lineIndex++;
-        if(lineIndex < dialogueLines.Length) 
+        if (lineIndex < dialogueLines.Length)
         {
             StartCoroutine(ShowLine());
         }
         else
         {
-            didDialogueStart=false;
-            dialoguePanel.SetActive(true);
+            EndDialogue();
         }
     }
 
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
+        buttonNext.SetActive(false); 
 
         foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
             yield return new WaitForSeconds(typingTime);
         }
-    }
-}
 
+        
+        if (lineIndex < dialogueLines.Length - 1)
+        {
+            buttonNext.SetActive(true);
+        }
+        else
+        {
+            
+            buttonNext.SetActive(false);
+            buttonChangeScene.SetActive(true);
+        }
+    }
+
+    private void EndDialogue()
+    {
+        
+        buttonNext.SetActive(false); 
+        buttonChangeScene.SetActive(true);
+    }
+
+    
+}
