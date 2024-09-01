@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Timer : MonoBehaviour
 {
     public static Timer Instance;
     public TextMeshProUGUI timeText;
+    public GameObject gameOverImage;
 
     [HideInInspector]
     public bool timeController;
@@ -14,7 +17,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         Instance = this;
-        
+        gameOverImage.SetActive(false);     
+
     }
 
     // Update is called once per frame
@@ -30,6 +34,8 @@ public class Timer : MonoBehaviour
         } else
         {
             Singleton.time = 0;
+            gameOverImage.SetActive(true);
+
         }
         DisplayTime(Singleton.time);
     }

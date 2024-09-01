@@ -56,16 +56,21 @@ public class SymptomsManager : MonoBehaviour
             {
                 symptomKeys[i].GetComponent<Symptom>().check.SetActive(true);
                 indexPositive++;
+                medChosen.sprite = null;
                 return;
             }
             else
             {
-                //indexNegative++;
-                Singleton.time -= 2;
+                indexNegative++;
+                if (indexNegative == totalSymptoms)
+                {
+                    Singleton.time -= 2;
+                }
+                medChosen.sprite = null;
             }
 
         }
-        medChosen.sprite = null;
+        
     }
 
     public void NextPatient()
