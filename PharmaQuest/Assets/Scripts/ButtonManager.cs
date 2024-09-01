@@ -43,6 +43,11 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Shop()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void ExtraTimeBoost()
     {
          Singleton.time += 2;
