@@ -37,4 +37,27 @@ public class ButtonManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ExtraTimeBoost()
+    {
+         Singleton.time += 2;
+        Singleton.pills -= 10;
+    }
+
+    public void ClueBoost()
+    {
+        BoostManager.instance.clue = true;
+    }
+
+    public void NewLifeBoost(Button button)
+    {
+        Singleton.pills -= 30;
+        BoostManager.instance.newLife = true;
+        button.enabled = false;
+    }
 }

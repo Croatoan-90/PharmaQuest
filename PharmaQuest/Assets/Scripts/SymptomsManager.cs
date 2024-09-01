@@ -78,6 +78,7 @@ public class SymptomsManager : MonoBehaviour
         gameObject.SetActive(false);
         nextPatient.SetActive(true);
         Singleton.lvl = lvl;
+        BoostManager.instance.ResetBoost();
         
     }
  
