@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Singleton.selectedSymptomKey);
+       
     }
 
     public void GetMedSelectedInfo(GameObject button)
