@@ -9,4 +9,5 @@ public class Singleton
     public static float time;
     public static int lvl = 1;
     public static int pills = 30;
+    public static int medkit = 10;
 }
