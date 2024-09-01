@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour
             timeToDisplay = 0;
         }
 
-        timeText.text = "Time: " + string.Format("{0:00}", timeToDisplay);
+        timeText.text = "Tiempo: " + string.Format("{0:00}", timeToDisplay);
     }
 
     public void TimeController()

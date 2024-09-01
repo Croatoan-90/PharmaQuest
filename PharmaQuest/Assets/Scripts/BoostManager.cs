@@ -26,7 +26,7 @@ public class BoostManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Singleton.pills < 10)
+        if(Singleton.pills < 2)
         {
             extraTimeButton.gameObject.SetActive(false);
         }
@@ -35,7 +35,7 @@ public class BoostManager : MonoBehaviour
             extraTimeButton.gameObject.SetActive(true);
         }
 
-        if (Singleton.pills < 30) 
+        if (Singleton.pills < 5) 
         { 
             extraLifeButton.gameObject.SetActive(false);
         }

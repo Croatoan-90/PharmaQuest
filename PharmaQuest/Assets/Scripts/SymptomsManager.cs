@@ -73,12 +73,13 @@ public class SymptomsManager : MonoBehaviour
                 if (indexNegative == totalSymptoms)
                 {
                     patientGeneralImage.sprite = imagePatient[0];
-                    Singleton.time -= 2;
+                    Singleton.time -= 5;
                 }
                 medChosen.sprite = null;
             }
 
         }
+        indexNegative = 0;
         
     }
 

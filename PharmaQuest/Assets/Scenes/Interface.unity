@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3055,7 +3055,7 @@ MonoBehaviour:
     con la ciudad m\xE1s cercana eran pocas y espor\xE1dicas."
   - "En medio de este escenario, un joven residente de medicina fue asignado al peque\xF1o
     centro de salud del pueblo como parte de su rotaci\xF3n rural. Desde su llegada,
-    \xC9l not\xF3 que las condiciones sanitarias del pueblo eran alarmantes. Los
+    \xE9l not\xF3 que las condiciones sanitarias del pueblo eran alarmantes. Los
     cortes de luz eran frecuentes, lo que afectaba la refrigeraci\xF3n de los alimentos,
     y el agua proven\xEDa de un r\xEDo cercano que a menudo se contaminaba durante
     las lluvias. Adem\xE1s, la falta de educaci\xF3n en manipulaci\xF3n de alimentos

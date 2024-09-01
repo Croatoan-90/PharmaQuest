@@ -51,7 +51,7 @@ public class ButtonManager : MonoBehaviour
     public void ExtraTimeBoost()
     {
          Singleton.time += 2;
-        Singleton.pills -= 10;
+        Singleton.pills -= 2;
     }
 
     public void ClueBoost()
@@ -61,7 +61,7 @@ public class ButtonManager : MonoBehaviour
 
     public void NewLifeBoost(Button button)
     {
-        Singleton.pills -= 30;
+        Singleton.pills -= 5;
         BoostManager.instance.newLife = true;
         button.gameObject.SetActive(false);
     }
