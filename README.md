@@ -19,6 +19,15 @@ visualizar y enseñar sobre sus productos.
 PharmaQuest fue exportado para ser usado en la web, en formato WEBGL, lo que permite la escalabilidad, el fácil acceso y la no 
 necesidad de requerimientos de hardware.
 
+<h2>¿Cómo se juega?</h2>
+
+El jugador debe poner atención a los síntomas que aparecen en la pantalla y debe elegir el medicamento que pueda curarlos. Se selecciona uno de los medicamentos, 
+luego se hace clic debajo de la imagen del paciente y finalmente se interactúa con la flecha verde. Si es correcto el medicamento, el síntoma aparece con un signo verde,
+mientras que si es equivocado, la imagen del paciente cambia y el tiempo se reduce.
+
+Luego de que todos los síntomas tengan el signo verde visible, se hace clic en el botón de Next y se continúa jugando. Así mismo existen ayudas, las cuales cuestan píldoras; enre ellas se encuentran
+el reloj, que suma tiempo y el desfibrilador, que permite tener una oportunidad más antes que se acabe el tiempo.
+
 <h2>Modos de juego</h2>
 
 PharmaQuest plantea tres modos de juegos:
